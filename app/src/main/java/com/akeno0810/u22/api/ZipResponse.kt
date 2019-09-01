@@ -1,0 +1,7 @@
+package com.akeno0810.u22.api
+
+data class ZipResponse(
+    var message: String? = null,
+    var status: Int? = null,
+    var results: ArrayList<Address> = ArrayList()
+)
