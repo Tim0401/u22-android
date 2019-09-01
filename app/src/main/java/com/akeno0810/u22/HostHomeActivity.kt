@@ -17,7 +17,6 @@ import rx.schedulers.Schedulers
 
 class HostHomeActivity : CSActivity() {
 
-    val mainHandler = Handler(Looper.getMainLooper())
     var events: List<Event>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,10 +58,11 @@ class HostHomeActivity : CSActivity() {
 
         // 項目をタップしたときの処理
         lv_event.setOnItemClickListener {parent, view, position, id ->
-/*
-            val intent = Intent(this, StartAnqActivity::class.java)
+
+            val intent = Intent(this, AnqListActivity::class.java)
+            intent.putExtra(AnqListActivity.EVENT_ID, events!![position].id!!.toInt())
             startActivity(intent)
- */
+
         }
 
     }

@@ -12,7 +12,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".EndAnqActivity"></activity>
+        <activity android:name=".AnqListActivity"></activity>
+        <activity android:name=".EndAnqActivity" />
         <activity android:name=".ShopAnqActivity" />
         <activity android:name=".DateAnqActivity" />
         <activity android:name=".StartAnqActivity" />

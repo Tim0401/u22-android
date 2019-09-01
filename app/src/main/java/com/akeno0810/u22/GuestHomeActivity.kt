@@ -29,7 +29,6 @@ class GuestHomeActivity : CSActivity() {
 
     var adapter: AnqAdapter? = null
     val qList = ArrayList<Questionnaire>()
-    val mainHandler = Handler(Looper.getMainLooper())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
