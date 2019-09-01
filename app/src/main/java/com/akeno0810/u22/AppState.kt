@@ -81,8 +81,11 @@ class AppState private constructor(context: Context) {
 
             // テスト用
 
+            /*
             _instance!!.groupId = 1
             _instance!!.groupAdmin = true
+
+            */
         }
 
         val instance: AppState
