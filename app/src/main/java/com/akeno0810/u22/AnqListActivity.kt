@@ -1,5 +1,6 @@
 package com.akeno0810.u22
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -56,5 +57,13 @@ class AnqListActivity : CSActivity() {
                 .observeOn(AndroidSchedulers.mainThread())
                 .unsubscribeOn(Schedulers.io())
                 .subscribe())
+
+        lv_anq_list_qs.setOnItemClickListener {parent, view, position, id ->
+
+            val intent = Intent(this, AndDetailActivity::class.java)
+            intent.putExtra(AndDetailActivity.EVENT_ID, eventId)
+            intent.putExtra(AndDetailActivity.ANQ_ID, qs!![position].id!!.toInt())
+            startActivity(intent)
+        }
     }
 }
